@@ -22,44 +22,48 @@ const handleForm =(e)=>{
 
 
   return (
-    <div className='formContainer'>
-     <h3>Profile Form</h3>
-     <form>
-      <fieldset>
-       <legend>Bio Data</legend>
-        <div className='names'>
-         
+    <div className="formContainer">
+      <h3>Profile Form</h3>
+      <form>
+        <fieldset>
+          <legend>Bio Data</legend>
+          <div className="names">
+            <label>
+              First Name
+              <input name="firstname" value={profile.firstname}  onChange={handler} type="firstname"/>
 
-         <label>
-         First Name
-         <input name='firstname' type="text" onChange={handler}/>
-         </label>
-         
-         
-         <label>
-         Last Name
-         <input name='lastname' type="text" onChange={handler}/>
-         </label>
+            </label>
 
-         
-         <label>
-         Email
-         <input name='email' type="email" onChange={handler}/>
-         </label>
+            <label>
+              Last Name
+              <input name="lastname" value={profile.lastname}  onChange={handler} type="lastname"/>
+               
+            </label>
+             </div>
 
-         
-         <label>
-         Phone
-         <input name='phone' type="tel" onChange={handler}/>
-         </label>
-        </div>
-      </fieldset>
-     <button className='form' onClick={handleForm}>Add Profile</button>
 
-     </form>
+            <div>
+            <label>
+              Email
+              <input name="email" value={profile.email}  onChange={handler}type="email"/>
+            </label>
 
+            <label>
+              Phone
+              <input name="phone" value={profile.phone}  onChange={handler}type="tel"/>
+
+            </label>
+          </div>
+
+
+
+        </fieldset>
+        <button className="form" onClick={handleForm}>
+          Add Profile
+        </button>
+      </form>
     </div>
-  )
+  );
 }
 
 export default ProfileForm
